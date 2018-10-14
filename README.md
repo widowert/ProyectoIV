@@ -11,6 +11,6 @@ __Herramientas:__
 + Lenguaje: `python`.
 + Framework: `flask`
 + Tests: `unittest` _, y_ `Travis CI` _para su integracion con Github_
-+ Base de datos: 
++ Base de datos: `redis`
 
 [![Build Status](https://travis-ci.org/widowert/ProyectoIV.svg?branch=master)](https://travis-ci.org/widowert/ProyectoIV)
