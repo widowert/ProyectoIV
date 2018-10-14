@@ -2,7 +2,7 @@
 
 ## Proyecto
 
-[__Documentación del proyecto:__](https://widowert.github.io/ProyectoIVDoc/)
+[__Documentación del proyecto:__](https://widowert.github.io/ProyectoIV/doc/description)
 
 __Gestor de citas:__
 calendario donde escoger el dia y hora dependiendo del profesional elegido,
