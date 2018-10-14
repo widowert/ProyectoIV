@@ -2,7 +2,7 @@
 
 ## Proyecto
 
-[__Documentación del proyecto__](https://widowert.github.io/ProyectoIV/doc/description)
+[__Documentación del proyecto__](https://widowert.github.io/ProyectoIV/doc/description) 
 [__Progreso__](https://widowert.github.io/ProyectoIV/doc/bynow)
 
 __Gestor de citas:__
