@@ -2,6 +2,8 @@
 
 ## Proyecto
 
+[__Documentación del proyecto:__](https://widowert.github.io/ProyectoIVDoc/)
+
 __Gestor de citas:__
 calendario donde escoger el dia y hora dependiendo del profesional elegido,
 habra dias y horas no disponibles _(ocupado o no laborable)(BD para almacenar dicha informacion)_
