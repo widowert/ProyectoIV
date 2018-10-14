@@ -87,9 +87,9 @@ def login():
             return render_template('login.html')
     return render_template('login2.html')
 
-@app.route('/uid')
+"""@app.route('/uid')
 def uid():
-    return request.sid()
+    return request.sid()"""
 
 @app.route('/addingdate')
 def addNewDate():
