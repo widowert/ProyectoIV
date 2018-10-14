@@ -15,4 +15,4 @@ __Login__:
   
 ## Tests
 
-  Por ahora los tests implementados son muy básicos y comprueban que los objetos estan creados correctamente.
+  Por ahora los tests implementados son muy básicos y comprueban que los objetos estan creados correctamente con `unittest`.
