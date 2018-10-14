@@ -7,8 +7,9 @@
 [__Progreso__](https://widowert.github.io/ProyectoIV/doc/bynow)
 
 __Gestor de citas:__
-calendario donde escoger el dia y hora dependiendo del profesional elegido,
-habra dias y horas no disponibles _(ocupado o no laborable)(BD para almacenar dicha informacion)_
+Mediante un login nos meteremos en nuestra cuenta, nos aparecera un calendario personalizado dependiendo de nuestras
+citas, del profesional elegido, dias libres, etc. Aqui además podremos elegir fecha y hora para cierto profesional y que esta cita quede registrada en nuestra cuenta y en el sistema para otros que quieran cita con el mismo profesional.__(EN DESARROLLO)__
+
 Voy a desarrollar este microservicio ya que podría servir de apoyo para el desarrollo de una página web de una empresa familiar, además, se pretende su máxima integracion en cualquier aplicación.
 
 __Herramientas:__
