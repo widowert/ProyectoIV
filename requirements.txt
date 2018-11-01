@@ -1,3 +1,5 @@
 pytest
-redis
+pymongo
+json
 flask
+
