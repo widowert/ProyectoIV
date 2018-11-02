@@ -12,7 +12,7 @@ app.secret_key = 'super secret key'
 
 client = MongoClient()
 db = client.proyecto
-
+'''
 proyect = db.proyecto
 proyect.insert({
     'username' : "oscar",
@@ -21,7 +21,7 @@ proyect.insert({
 proyect.insert({
     'username' : "admin",
     'password' : "admin"
-})
+})'''
 
 """class Usuario:
 
