@@ -1,4 +1,3 @@
-# coding=utf-8
 import unittest,sys,os,json
 from flask import jsonify
 sys.path.append("src/")
@@ -6,9 +5,11 @@ from classes import Citas
 
 class TestProyecto(unittest.TestCase):
     def setUp(self):
+        #Setting up los objetos a usar en el test posteriormente
         self.dates=Citas()
         self.dates.setTestingClass(True)
     def testCreacionCita(self):
+        #Comprobando correcta creacion del objeto Citas
         self.assertIsInstance(self.dates,Citas,"Objeto citas creado correctamente")
     def testGetFreeDates(self):
         #Comprobando valor devuelto en modo testing ERROR
