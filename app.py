@@ -7,13 +7,13 @@ from classes import Citas
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
+#app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.secret_key = 'super secret key'
 
 @app.route('/')
 def index():
-    myjson = jsonify({
-    "status":"OK",
+    '''myjson = jsonify(
+    {"sstatus":"OK",
     "ejemplo de consulta general":{"ruta":"/getFreeDates/10[dia]/11[mes]/18[año]",
                     "return":"{JSON con horas libres ese dia}"
                     }
@@ -32,10 +32,25 @@ def index():
         response = myjson,
         status = 200,
         mimetype = 'application/json'
-    )
-    return response
+    )'''
+    return jsonify({
+    "status":"OK",
+    "ejemplo de consulta general":{"ruta":"/getFreeDates/10[dia]/11[mes]/18[año]",
+                    "return":"{JSON con horas libres ese dia}"
+                    }
+    ,
+    "ejemplo de consulta propia":{"ruta":"/getDates/username",
+                    "return":"{JSON con tus citas si las hay}"
+    },
+    "consultar todas las citas libres":{"ruta":"/getAllFreeDates",
+                    "return":"{JSON con todas las citas libres}"
+    },
+    "consultar todas las citas registradas":{"ruta":"/getAllOcuppiedDates",
+                    "return":"{JSON con todas las citas registradas}"
+    }
+    })
     #return redirect(url_for('status'))
-@app.route('/status')
+'''@app.route('/status')
 def status():
     myjson = jsonify({
     "status":"OK",
@@ -58,11 +73,8 @@ def status():
         status = 200,
         mimetype = 'application/json'
     )
-    return response
-    '''"ejemplo de registro cita":{"ruta":"/takeDate/username/10[dia]/11[mes]/18[año]/1400[hora de comienzo cita sin ':']",
-                    "return":"{JSON con la cita escogida y las que tuvieras}"
-    }
-    })'''
+    return response'''
+
 
 @app.route('/getFreeDates/<int:dia>/<int:mes>/<int:anio>')
 @app.route('/getFreeDates/<int:dia>/<int:mes>')
@@ -101,7 +113,7 @@ def getDates(username=None):
 
 @app.errorhandler(404)
 def error404(e):
-    return '<html><head>ERROR 404</head><body><p>ERROR 404</p></body></html>',404
+    return jsonify({'ERROR':"Page not found"})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
