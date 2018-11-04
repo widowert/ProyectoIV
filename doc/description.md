@@ -7,11 +7,16 @@
 ## Proyecto
 
 __Gestor de citas:__
-calendario donde escoger el dia y hora dependiendo del profesional elegido,
-habra dias y horas no disponibles _(ocupado o no laborable)(BD para almacenar dicha informacion)_
+Mediante un login nos meteremos en nuestra cuenta, nos aparecera un calendario personalizado dependiendo de nuestras
+citas, del profesional elegido, dias libres, etc. Aqui además podremos elegir fecha y hora para cierto profesional y que esta cita quede registrada en nuestra cuenta y en el sistema para otros que quieran cita con el mismo profesional.__(EN DESARROLLO)__
 
 Voy a desarrollar este microservicio ya que podría servir de apoyo para el desarrollo de una página web de una empresa familiar, además, se pretende su máxima integracion en cualquier aplicación.
 
+[__Progreso__](https://widowert.github.io/ProyectoIV/doc/bynow)
+
+## PaaS Elegido: Heroku
+
+He elegido Heroku por su simplicidad y porque tras varios intentos con otros PaaS ha demostrado ser el más amigable; además de ser gratuito para servicios básicos como los que necesito para este proyecto. 
 
 __Herramientas:__
 + Lenguaje: `python`.
@@ -20,3 +25,11 @@ __Herramientas:__
 + Base de datos: `redis`
 + PaaS: `HEROKU`
 
+## Instalación de dependecias
+pip install -r requirements.txt
+
+## Uso de la aplicacion
+_Ejecución app_ `python app.py` (version python testeada 3.6.6)
+En la raíz / redirige a /status donde puedes ver el status y ejemplos de uso.
+
+_Ejecución tests_ `python test_proyecto.py` (version python testeada 3.6.6)
