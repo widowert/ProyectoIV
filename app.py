@@ -7,6 +7,7 @@ from classes import Citas
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.secret_key = 'super secret key'
 
 @app.route('/')
