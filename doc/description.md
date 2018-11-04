@@ -12,13 +12,19 @@ citas, del profesional elegido, dias libres, etc. Aqui además podremos elegir f
 
 Voy a desarrollar este microservicio ya que podría servir de apoyo para el desarrollo de una página web de una empresa familiar, además, se pretende su máxima integracion en cualquier aplicación.
 
-[__Progreso__](https://widowert.github.io/ProyectoIV/doc/bynow)
+## Documentación:
+
+[__Descripción del proyecto__](https://widowert.github.io/ProyectoIV/doc/description)
+
+[__Progreso, hecho hasta ahora__](https://widowert.github.io/ProyectoIV/doc/bynow)
+
+[__Despliegue Heroku__](https://widowert.github.io/ProyectoIV/doc/heroku)
 
 ## PaaS Elegido: Heroku
 
 He elegido Heroku por su simplicidad y porque tras varios intentos con otros PaaS ha demostrado ser el más amigable; además de ser gratuito para servicios básicos como los que necesito para este proyecto. 
 
-__Herramientas:__
+## Herramientas
 + Lenguaje: `python`.
 + Framework: `flask`
 + Tests: `unittest` _, y_ `Travis CI` _para su integracion con Github_
