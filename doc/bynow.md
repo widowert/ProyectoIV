@@ -16,6 +16,6 @@ __Citas__:
   
 ## Tests
 
-  Por ahora los tests implementados comprueban que los objetos estan creados correctamente y que los valores devueltos (citas) por los métodos de la clase son correctos (lo esperado) si le pasamos parámetros de citas que no existen o que si existen.
+  Por ahora los tests implementados comprueban que los objetos estan creados correctamente y que los valores devueltos (citas) por los métodos de la clase son correctos (lo esperado) si le pasamos parámetros de citas que no existen o que si existen (en modo testing).
 
 [![Build Status](https://travis-ci.org/widowert/ProyectoIV.svg?branch=master)](https://travis-ci.org/widowert/ProyectoIV)
