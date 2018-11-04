@@ -12,10 +12,7 @@ app.secret_key = 'super secret key'
 
 @app.route('/')
 def index():
-    return redirect(url_for('status'))
-@app.route('/status')
-def status():
-    return jsonify({
+    myjson = jsonify({
     "status":"OK",
     "ejemplo de consulta general":{"ruta":"/getFreeDates/10[dia]/11[mes]/18[año]",
                     "return":"{JSON con horas libres ese dia}"
@@ -31,6 +28,37 @@ def status():
                     "return":"{JSON con todas las citas registradas}"
     }
     })
+    response = app.response_class(
+        response = myjson,
+        status = 200,
+        mimetype = 'application/json'
+    )
+    return response
+    #return redirect(url_for('status'))
+@app.route('/status')
+def status():
+    myjson = jsonify({
+    "status":"OK",
+    "ejemplo de consulta general":{"ruta":"/getFreeDates/10[dia]/11[mes]/18[año]",
+                    "return":"{JSON con horas libres ese dia}"
+                    }
+    ,
+    "ejemplo de consulta propia":{"ruta":"/getDates/username",
+                    "return":"{JSON con tus citas si las hay}"
+    },
+    "consultar todas las citas libres":{"ruta":"/getAllFreeDates",
+                    "return":"{JSON con todas las citas libres}"
+    },
+    "consultar todas las citas registradas":{"ruta":"/getAllOcuppiedDates",
+                    "return":"{JSON con todas las citas registradas}"
+    }
+    })
+    response = app.response_class(
+        response = myjson,
+        status = 200,
+        mimetype = 'application/json'
+    )
+    return response
     '''"ejemplo de registro cita":{"ruta":"/takeDate/username/10[dia]/11[mes]/18[año]/1400[hora de comienzo cita sin ':']",
                     "return":"{JSON con la cita escogida y las que tuvieras}"
     }
