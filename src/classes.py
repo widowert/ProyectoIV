@@ -5,6 +5,8 @@ class Citas:
     #Clase cita con los metodos necesarios para la extraccion
     #de citas especificas desde json
     def __init__(self):
+        #Para leer los archivos solo una vez y comprobar antes
+        #de su uso que se leen correctamente
         self.testing=False
         try:
             if os.path.exists('data/freeDates.json'):
