@@ -24,7 +24,7 @@ def index():
     "consultar todas las citas libres":{"ruta":"/getAllFreeDates",
                     "return":"{JSON con todas las citas libres}"
     },
-    "consultar todas las citas registradas":{"ruta":"/getAllOcuppiedDates",
+    "cnsultar todas las citas registradas":{"ruta":"/getAllOcuppiedDates",
                     "return":"{JSON con todas las citas registradas}"
     }
     })
