@@ -1,18 +1,22 @@
 ## Implementado
 
-__Cita__:
-  Hasta el momento una implementación muy pobre, haciendo de la clase una especie de `struct` con la fecha.
-  
-__Calendario__: 
-   Por ahora con ayuda de la biblioteca `calendar` podemos generar un calendario __HTML__ de un mes y año concreto
-   y mostrarlo.
-     +__Set Calendario__: Para poder cambiar el mes o año de visualización del calendario.(se le puede pasar
-      solo el mes, o el mes y el año, el año por defecto es el 2018)      
-      
-__Login__:
-   He implementado un pequeño login usando como base de datos `redis` y metiendo los valores directamente `admin:admin`
-   Tras el login se pasa a la pagina donde podemos ver el calendario.
+__Citas__:
+    Única clase hasta el momento, donde se encuentran todos los métodos necesarios para
+    la correcta lectura e interpretación de los json (en /data) donde están guardadas
+    las citas libres (dia y hora libre) y otro json donde están guardadas las citas que
+    se han registrado (dia y hora de la cita + usuario que la ha cogido).
+    Los métodos hasta ahora solo permiten consultar 
+    el status de la aplicación junto con ejemplos de uso (página principal), 
+    las citas libres para un dia concreto, 
+    todas las citas libres para cualquier dia, 
+    las citas ocupadas de un usuario concreto y 
+    todas las citas ocupadas por cualquier usuario.
+    
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://proyectoiv.herokuapp.com)
   
 ## Tests
 
-  Por ahora los tests implementados son muy básicos y comprueban que los objetos estan creados correctamente con `unittest`.
+  Por ahora los tests implementados  comprueban que los objetos estan creados correctamente,los valores devueltos (citas) si le pasamos parámetros de citas
+  que no existen o que si existen en todos los métodos de la única clase Citas.
+
+[![Build Status](https://travis-ci.org/widowert/ProyectoIV.svg?branch=master)](https://travis-ci.org/widowert/ProyectoIV)
