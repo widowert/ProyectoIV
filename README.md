@@ -3,17 +3,23 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://proyectoiv.herokuapp.com)
+
 ## Proyecto
-
-[__Documentación del proyecto__](https://widowert.github.io/ProyectoIV/doc/description)
-
-[__Progreso__](https://widowert.github.io/ProyectoIV/doc/bynow)
 
 __Gestor de citas:__
 Mediante un login nos meteremos en nuestra cuenta, nos aparecera un calendario personalizado dependiendo de nuestras
 citas, del profesional elegido, dias libres, etc. Aqui además podremos elegir fecha y hora para cierto profesional y que esta cita quede registrada en nuestra cuenta y en el sistema para otros que quieran cita con el mismo profesional.__(EN DESARROLLO)__
 
 Voy a desarrollar este microservicio ya que podría servir de apoyo para el desarrollo de una página web de una empresa familiar, además, se pretende su máxima integracion en cualquier aplicación.
+
+## Documentación:
+
+[__Descripción del proyecto__](https://widowert.github.io/ProyectoIV/doc/description)
+
+[__Progreso, hecho hasta ahora__](https://widowert.github.io/ProyectoIV/doc/bynow)
+
+[__Despliegue Heroku__](https://widowert.github.io/ProyectoIV/doc/heroku)
+
 
 ## PaaS Elegido: Heroku
 
