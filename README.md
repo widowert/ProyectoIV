@@ -27,7 +27,8 @@ He elegido Heroku por su simplicidad y porque tras varios intentos con otros Paa
 
 **despliegue** : [proyectoiv](https://proyectoiv.herokuapp.com)
 
-__Herramientas:__
+## Herramientas:
+
 + Lenguaje: `python`.
 + Framework: `flask`
 + Tests: `unittest` _, y_ `Travis CI` _para su integracion con Github_
