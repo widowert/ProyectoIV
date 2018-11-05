@@ -10,9 +10,9 @@ Una vez registrados, logeados y teniendo github a punto para desplegar procedemo
 
 Dentro de nuestra **área personal** nos vamos a la parte derecha y clickamos en **New -> Create new app**
 
-![img](https://github.com/widowert/ProyectoIV/blob/master/doc/img/newApp.PNG)
+![img](https://widowert.github.io/ProyectoIV/doc/img/newApp.PNG)
 
-
+https://github.com/widowert/ProyectoIV/blob/master/doc/img/newApp.PNG
 
 **Elegimos el nombre de nuestra app** (es el que aparecerá en el url de acceso al despliegue) **y la región** donde lo queremos desplegar (por cercanía, para un mejor tiempo de respuesta elegimos Europa)
 
