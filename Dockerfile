@@ -1,4 +1,4 @@
-FROM alpine
+FROM python:3
 
 MAINTAINER Oscar Osorio <oog3996@gmail.com>
 
