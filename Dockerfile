@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM alpine
 
 MAINTAINER Oscar Osorio <oog3996@gmail.com>
 
