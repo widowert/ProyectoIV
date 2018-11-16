@@ -11,4 +11,4 @@ COPY . .
 
 CMD [ "gunicorn", "app:app" ]
 
-EXPOSE 80
+EXPOSE 5000
