@@ -1,4 +1,4 @@
-FROM python:3
+FROM 3-slim
 
 MAINTAINER Oscar Osorio <oog3996@gmail.com>
 
