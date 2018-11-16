@@ -1,4 +1,4 @@
-FROM 3-slim
+FROM debian:stretch-slim
 
 MAINTAINER Oscar Osorio <oog3996@gmail.com>
 
