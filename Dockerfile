@@ -4,11 +4,11 @@ MAINTAINER Oscar Osorio <oog3996@gmail.com>
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-
 COPY . .
 
-CMD [ "gunicorn", "app:app" ]
+RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 5000
+EXPOSE 80
+
+CMD gunicorn app:app --logfile=- --bind 0.0.0.0:80
+
