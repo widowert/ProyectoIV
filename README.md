@@ -27,6 +27,15 @@ He elegido Heroku por su simplicidad y porque tras varios intentos con otros Paa
 
 **despliegue** : [proyectoiv](https://proyectoiv.herokuapp.com)
 
+## Docker
+
+Para el uso de docker en este proyecto lo he subido para que cualquiera pueda usarlo en DockerHub y además lo tengo desplegado en Heroku.
+
+Contenedor: https://dockerproyectoiv.herokuapp.com/
+
+Repositorio en DockerHub: https://hub.docker.com/r/widowert/proyectoiv/
+
+
 ## Herramientas:
 
 + Lenguaje: `python`.
