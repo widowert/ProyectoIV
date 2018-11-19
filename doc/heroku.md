@@ -10,32 +10,32 @@ Una vez registrados, logeados y teniendo github a punto para desplegar procedemo
 
 Dentro de nuestra **área personal** nos vamos a la parte derecha y clickamos en **New -> Create new app**
 
-![img](https://github.com/widowert/ProyectoIV/blob/master/doc/img/newApp.PNG)
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/newApp.PNG)
 
 
 
 **Elegimos el nombre de nuestra app** (es el que aparecerá en el url de acceso al despliegue) **y la región** donde lo queremos desplegar (por cercanía, para un mejor tiempo de respuesta elegimos Europa)
 
-![img](https://github.com/widowert/ProyectoIV/blob/master/doc/img/herokuappNameAndRegion.PNG)
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/herokuappNameAndRegion.PNG)
 
 
 
 Una vez creada lo primero que vamos a hacer es irnos a la pestaña **Deploy** (dentro de nuestra app en la pagina de Heroku)
 
-![img](https://github.com/widowert/ProyectoIV/blob/master/doc/img/herokuDeploystart.PNG)
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/herokuDeploystart.PNG)
 
 
 
 Aquí, **elegimos GitHub en Deployement method** y lo enlazamos con nuestra cuenta. Luego **en App connected elegimos el repositorio** donde esta nuestra app **y la rama para deployment**.
 En este punto ya tenemos nuestra app conectada, pero como quiero que los cambios que vaya haciendo en Git se actualicen también en mi app tengo que **activar el Automatic Deployment**, este lo **unimos con** el proceso de **Travis (wait for CI to pass)**, para que el deploy automático se haga cuando hagamos cambios y estos hayan pasado los tests definidos para la app.
 
-![img](https://github.com/widowert/ProyectoIV/blob/master/doc/img/herokuDeployoptionsChoosen.PNG)
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/herokuDeployoptionsChoosen.PNG)
 
 
 
 También podemos quedarnos en el paso de conectar nuestra cuenta y repositorio de GitHub y hacer cada **Deploy manualmente** cuando queramos ver los cambios en la app.
 
-![img](https://github.com/widowert/ProyectoIV/blob/master/doc/img/herokuManualDeploy.PNG)
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/herokuManualDeploy.PNG)
 
 
 
