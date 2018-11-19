@@ -13,7 +13,7 @@ app.secret_key = 'super secret key'
 @app.route('/')
 def index():
     '''myjson = jsonify(
-    {"sstatus":"OK",
+    {"status":"OK",
     "ejemplo de consulta general":{"ruta":"/getFreeDates/10[dia]/11[mes]/18[año]",
                     "return":"{JSON con horas libres ese dia}"
                     }
@@ -50,30 +50,9 @@ def index():
     }
     })
     #return redirect(url_for('status'))
-'''@app.route('/status')
+@app.route('/status')
 def status():
-    myjson = jsonify({
-    "status":"OK",
-    "ejemplo de consulta general":{"ruta":"/getFreeDates/10[dia]/11[mes]/18[año]",
-                    "return":"{JSON con horas libres ese dia}"
-                    }
-    ,
-    "ejemplo de consulta propia":{"ruta":"/getDates/username",
-                    "return":"{JSON con tus citas si las hay}"
-    },
-    "consultar todas las citas libres":{"ruta":"/getAllFreeDates",
-                    "return":"{JSON con todas las citas libres}"
-    },
-    "consultar todas las citas registradas":{"ruta":"/getAllOcuppiedDates",
-                    "return":"{JSON con todas las citas registradas}"
-    }
-    })
-    response = app.response_class(
-        response = myjson,
-        status = 200,
-        mimetype = 'application/json'
-    )
-    return response'''
+    return jsonify({"status":"OK"})
 
 
 @app.route('/getFreeDates/<int:dia>/<int:mes>/<int:anio>')
