@@ -20,6 +20,8 @@ Voy a desarrollar este microservicio ya que podría servir de apoyo para el desa
 
 [__Configuración Heroku__](https://widowert.github.io/ProyectoIV/doc/heroku)
 
+[__Docker (inprogress)__](https://widowert.github.io/ProyectoIV/doc/docker)
+
 
 ## PaaS Elegido: Heroku
 
