@@ -66,11 +66,13 @@ $ sudo docker run hello-world
 	*Descarga una imágen de prueba y la ejecuta*	
 ~~~
 
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCdocker2.PNG)
+
 ## Creación de Docker:
 
 Primero tenemos que crear un **dockerfile**, este contendrá la información necesaria para que docker pueda formar nuestro contenedor "personalizado" para ello tenemos que especificar, entre otras cosas, el lenguaje y versión de este utilizada ( he de añadir que para un mismo lenguaje hay versiones de imágenes más o menos pesadas, habiendo probado algunas más livianas me decidí por mantener la mía, bastante pesada, por haber tenido problemas con las demás ), las ordenes necesarias para arrancar el docker e instalar las dependencias de nuestra app y la orden necesaria para ejecutar la propia app así como el puerto donde correrá.
 
-DOC3
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCdockerfile3.PNG)
 
 Una vez tenemos el dockerfile terminado y en la carpeta de nuestro proyecto, podemos **construir el docker** ( no necesario si queremos utilizar *DockerHub*, saltar al siguiente paso si fuera el caso ):
 ~~~
@@ -91,19 +93,19 @@ En este punto, tenemos nuestro docker listo, ahora nuestro interés en DockerHub
 
 Para empezar vamos a [DockerHub](https://hub.docker.com/) y nos creamos una cuenta.
 
-DOC4
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCdockerhub4.PNG)
 
 Una vez creada nos vamos a los ajustes de nuestra cuenta, al apartado de cuentas y servicios enlazados.
 
-DOC5
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCdockerhub5.PNG)
 
 Una vez enlazado, podemos crear un docker a partir de nuestro repo y además cada cambio que hagamos, se guardara automáticamente en nuestro docker de DockerHub.
 
-DOC6
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCdockerhub6.PNG)
 
-DOC7
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCdockerhub7.PNG)
 
-DOC8
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCdockerhub8.PNG)
 
 y listo, tenemos nuestro docker creado, compartido (descarga y ejecución en una orden) y automatizado (cambios en GitHub generan build automática).
 
@@ -116,14 +118,14 @@ $ sudo docker run -it --name widowert/proyectoiv
 
 Primero, en Heroku ( voy a suponer que ya tenemos cuenta, necesaria para el despliegue del Hito anterior) creamos una nueva app, y en Deployment method, aunque lo enlazaremos con GitHub posteriormente, necesitamos seguir los pasos indicados para 'Container Registry' 
 
-DOC9
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCheroku9.PNG)
 
 seguimos estos pasos en nuestro sistema ( algo que me dio varios dolores de cabeza fue una opción que aquí no especifica, la opción *-a* para especificar el nombre de la app en Heroku a la que nos referimos, pues si no lo especificamos la orden fallará ( aplicación no existe ) al no saber exactamente a que te refieres ).
 
 Para que Heroku consiga desplegar nuestro *docker*, al igual que tuvimos que especificarle la orden para desplegar nuestra aplicación en sesiones anteriores ( *Procfile* ), tendremos que especificarle como construir y ejecutar nuestro docker ( como dijimos antes, esto lo especificamos anteriormente en el *Dockerfile*, pero Heroku no sabe esto a no ser que se lo digamos ) para ellos tenemos que crear **heroku.yml** donde especificaremos que para la construccion (build) de nuestro docker para los procesos web (único que vamos a usar) utilice el Dockerfile en la misma carpeta, además, cuando vaya a ejecutarlo (run) utilice cierta orden.
 
-DOC10
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCherokuyml10.PNG)
 
 Y listo, ya tenemos nuestro docker desplegado: 
 
-DOC11
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCheroku11.PNG)
