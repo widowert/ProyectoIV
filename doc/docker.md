@@ -102,4 +102,23 @@ DOC8
 
 y listo, tenemos nuestro docker creado, compartido (descarga y ejecución en una orden) y automatizado (cambios en GitHub generan build automática).
 
+Para descargar y correr mi docker ejecuta:
+~~~
+$ sudo docker run -it --name widowert/proyectoiv
+~~~
+
 # Despliegue Heroku
+
+Primero, en Heroku ( voy a suponer que ya tenemos cuenta, necesaria para el despliegue del Hito anterior) creamos una nueva app, y en Deployment method, aunque lo enlazaremos con GitHub posteriormente, necesitamos seguir los pasos indicados para 'Container Registry' 
+
+DOC9
+
+seguimos estos pasos en nuestro sistema ( algo que me dio varios dolores de cabeza fue una opción que aquí no especifica, la opción *-a* para especificar el nombre de la app en Heroku a la que nos referimos, pues si no lo especificamos la orden fallará ( aplicación no existe ) al no saber exactamente a que te refieres ).
+
+Para que Heroku consiga desplegar nuestro *docker*, al igual que tuvimos que especificarle la orden para desplegar nuestra aplicación en sesiones anteriores ( *Procfile* ), tendremos que especificarle como construir y ejecutar nuestro docker ( como dijimos antes, esto lo especificamos anteriormente en el *Dockerfile*, pero Heroku no sabe esto a no ser que se lo digamos ) para ellos tenemos que crear **heroku.yml** donde especificaremos que para la construccion (build) de nuestro docker para los procesos web (único que vamos a usar) utilice el Dockerfile en la misma carpeta, además, cuando vaya a ejecutarlo (run) utilice cierta orden.
+
+DOC10
+
+Y listo, ya tenemos nuestro docker desplegado: 
+
+DOC11
