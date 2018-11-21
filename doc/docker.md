@@ -57,8 +57,12 @@ Verificamos que está correctamente instalado y funcionando:
 ~~~
 $ systemctl status docker.service
 	*Debe de estar activo*
+	
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCdocker1.PNG)
+
 $ sudo docker run hello-world
 	*Descarga una imágen de prueba y la ejecuta*
+	
 ~~~
 
 ## Creación de Docker:
