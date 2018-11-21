@@ -62,3 +62,44 @@ $ sudo docker run hello-world
 ~~~
 
 ## Creación de Docker:
+
+Primero tenemos que crear un **dockerfile**, este contendrá la información necesaria para que docker pueda formar nuestro contenedor "personalizado" para ello tenemos que especificar, entre otras cosas, el lenguaje y versión de este utilizada ( he de añadir que para un mismo lenguaje hay versiones de imágenes más o menos pesadas, habiendo probado algunas más livianas me decidí por mantener la mía, bastante pesada, por haber tenido problemas con las demás ), las ordenes necesarias para arrancar el docker e instalar las dependencias de nuestra app y la orden necesaria para ejecutar la propia app así como el puerto donde correrá.
+
+DOC3
+
+Una vez tenemos el dockerfile terminado y en la carpeta de nuestro proyecto, podemos **construir el docker** ( no necesario si queremos utilizar *DockerHub*, saltar al siguiente paso si fuera el caso ):
+~~~
+$ sudo docker build -t proyectoiv
+~~~
+Podemos comprobar que está creado consultando las imágenes de nuestro sistema:
+~~~
+$ sudo docker images
+~~~
+Lo ejecutamos en nuestro sistema (localmente) especificando el puerto donde estará en el docker nuestra app y al puerto que queremos redirigirlo además del nombre puesto anteriormente (tuve problemas con esto, ya que uso vagrant y hay más de una redirección de puerto, puede que no sea necesaria esta opción *-p*):
+~~~
+$ sudo docker run -p 80:80 -it proyectoiv
+~~~
+
+# DockerHub
+
+En este punto, tenemos nuestro docker listo, ahora nuestro interés en DockerHub no es más que compartirlo, de forma que cualquiera mediante una sola orden en la consola pueda descargarselo y correrlo en su sistema. También señalar que el docker creado anteriormente esta montado a partir de nuestro proyecto en GitHub y como DockerHub permite su sincronización con GitHub, una vez subido los cambios a nuestro repo( dockerfile ) DockerHub se encarga de montárnoslo automáticamente, por lo que el anterior podríamos decir que fue para probarlo localmente.
+
+Para empezar vamos a [DockerHub](https://hub.docker.com/) y nos creamos una cuenta.
+
+DOC4
+
+Una vez creada nos vamos a los ajustes de nuestra cuenta, al apartado de cuentas y servicios enlazados.
+
+DOC5
+
+Una vez enlazado, podemos crear un docker a partir de nuestro repo y además cada cambio que hagamos, se guardara automáticamente en nuestro docker de DockerHub.
+
+DOC6
+
+DOC7
+
+DOC8
+
+y listo, tenemos nuestro docker creado, compartido (descarga y ejecución en una orden) y automatizado (cambios en GitHub generan build automática).
+
+# Despliegue Heroku
