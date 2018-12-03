@@ -70,7 +70,7 @@ $ sudo docker run hello-world
 
 ## Creación de Docker:
 
-Primero tenemos que crear un **dockerfile**, este contendrá la información necesaria para que docker pueda formar nuestro contenedor "personalizado" para ello tenemos que especificar, entre otras cosas, el lenguaje y versión de este utilizada (**para un mismo lenguaje, python en mi caso, hay diferentes tipos de imágenes (máquinas base) que se aseguran correr python con más o menos utilidades "extras" para este, añadidas por defecto (son como software contenirizado basados en Ubuntu,Debian,etc). Para nuestro proyecto, al ser muy simple, no necesitamos gran cosa por lo que busco una distribución ligera. Las etiquetadas con alpine (elegido) estan basadas en Alpine Linux, una distribución minimalista que no contiene, por defecto, mucha de la "morralla" que cargariamos con otras distribuciones y que, en nuestro caso, sería innecesaria. La diferencia, de hecho, es de unos 500Mb con otras imágenes (incluida la que utilizaba anteriormente), esto mejorará los tiempos de descarga y de inicio de nuestro docker**), las ordenes necesarias para arrancar el docker e instalar las dependencias de nuestra app y la orden necesaria para ejecutar la propia app así como el puerto donde correrá.
+Primero tenemos que crear un **dockerfile**, este contendrá la información necesaria para que docker pueda formar nuestro contenedor "personalizado" para ello tenemos que especificar, entre otras cosas, el lenguaje y versión de este utilizada, las ordenes necesarias para arrancar el docker e instalar las dependencias de nuestra app y la orden necesaria para ejecutar la propia app así como el puerto donde correrá.
 
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/docker/DOCdockerfile3.PNG)
 
