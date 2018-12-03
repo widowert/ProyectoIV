@@ -1,10 +1,10 @@
-FROM python:3
+FROM python:3-alpine
 
 MAINTAINER Oscar Osorio <oog3996@gmail.com>
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY /src /test /data /app.py /requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
