@@ -4,7 +4,7 @@ MAINTAINER Oscar Osorio <oog3996@gmail.com>
 
 WORKDIR /usr/src/app
 
-COPY /src /test /data /app.py /requirements.txt .
+COPY /src /test /data /app.py /requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
