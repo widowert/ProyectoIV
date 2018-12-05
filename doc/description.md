@@ -28,7 +28,6 @@ He elegido Heroku por su simplicidad y porque tras varios intentos con otros Paa
 + Lenguaje: `python`.
 + Framework: `flask`
 + Tests: `unittest` _, y_ `Travis CI` _para su integracion con Github_
-+ Base de datos: `redis`
 + PaaS: `HEROKU`
 
 ## Instalación de dependecias
