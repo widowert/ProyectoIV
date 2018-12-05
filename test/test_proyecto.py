@@ -1,6 +1,6 @@
 import unittest,sys,os,json
 from flask import jsonify
-sys.path.append("src/")
+sys.path.append("./src/")
 from classes import Citas
 
 class TestProyecto(unittest.TestCase):
