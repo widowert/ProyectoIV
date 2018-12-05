@@ -7,8 +7,7 @@
 ## Proyecto
 
 __Gestor de citas:__
-Mediante un login nos meteremos en nuestra cuenta, nos aparecera un calendario personalizado dependiendo de nuestras
-citas, del profesional elegido, dias libres, etc. Aqui además podremos elegir fecha y hora para cierto profesional y que esta cita quede registrada en nuestra cuenta y en el sistema para otros que quieran cita con el mismo profesional.__(EN DESARROLLO)__
+Microserivico orientado a aportar facilidades de cara al sistema interno de citas de cualquier compañia. El microserivcio desarrollado es muy simple pero esboza correctamente la idea. Su funcionalidad no es más que alamacenar citas (tanto libres como ocupadas) y poder consultarlas (todas las libres, todas las ocupadas, por usuario, por fecha) y modificarlas (por ahora la modificación es eliminar y añadir).
 
 Voy a desarrollar este microservicio ya que podría servir de apoyo para el desarrollo de una página web de una empresa familiar, además, se pretende su máxima integracion en cualquier aplicación.
 
