@@ -43,7 +43,6 @@ Repositorio en DockerHub: https://hub.docker.com/r/widowert/proyectoiv/
 + Lenguaje: `python`.
 + Framework: `flask`
 + Tests: `unittest` _, y_ `Travis CI` _para su integracion con Github_
-+ Base de datos: `redis` _NO USADA POR AHORA_
 + PaaS: `HEROKU`
 
 
