@@ -55,6 +55,7 @@ class Citas:
                 return "FOUND"
             else:
                 return jsonify(freeDates)
+                #return jsonify(freeDates[1])
 
     def getMyDates(self,username):
         myDates=[]
@@ -91,5 +92,95 @@ class Citas:
 
     def setTestingClass(self,value=False):
         self.testing=value
+
+    def deleteFreeDate(self,theDate,theHour):
+        count=0
+        result=False
+        if os.path.exists('data/freeDates.json'):
+            with open('data/freeDates.json',"r+") as file:
+
+                data=json.load(file)
+                for date in data['dates']:
+                    if date['date'] == theDate and date['hour'] == theHour:
+                        data['dates'].pop(count)
+                        result=True
+                    count+=1
+                file.seek(0)
+                json.dump(data,file)
+                file.truncate()
+        else:
+            raise IOError("Cant find freeDates.json")
+        if result:
+            return jsonify({"return":"Deleted succesfully"})
+        else:
+            return jsonify({"return":"Cant delete, didnt find it"})
+
+    def addFreeDate(self,theDate,theHour):
+        count=0
+        right=0
+        if os.path.exists('data/freeDates.json'):
+            with open('data/freeDates.json',"r+") as file:
+
+                data=json.load(file)
+                for date in data['dates']:
+                    if date['date'] == theDate:
+                        if date['hour'] == theHour:
+                            return jsonify({"ERROR":"Ya existe esta cita"})
+                        right=count
+                    count+=1
+                tmp={"date":theDate,
+                    "hour":theHour}
+                data['dates'].insert(right+1,tmp)
+                file.seek(0)
+                json.dump(data,file)
+                #file.truncate()
+        else:
+            raise IOError("Cant find freeDates.json")
+        return jsonify({"result":"Cita aniadida correctamente"})
+
+    def deleteOccupiedDate(self,theDate,theHour):
+        count=0
+        result=False
+        if os.path.exists('data/occupiedDates.json'):
+            with open('data/occupiedDates.json',"r+") as file:
+
+                data=json.load(file)
+                for date in data:
+                    if date['date'] == theDate and date['hour'] == theHour:
+                        data.pop(count)
+                        result=True
+                    count+=1
+                file.seek(0)
+                json.dump(data,file)
+                file.truncate()
+        else:
+            raise IOError("Cant find freeDates.json")
+        if result:
+            return jsonify({"return":"Deleted succesfully"})
+        else:
+            return jsonify({"return":"Cant delete, didnt find it"})
+
+    def addOccupiedDate(self,theDate,theHour,theUser):
+        count=0
+        right=0
+        if os.path.exists('data/occupiedDates.json'):
+            with open('data/occupiedDates.json',"r+") as file:
+                data=json.load(file)
+                for date in data:
+                    if date['date'] == theDate:
+                        if date['hour'] == theHour:
+                            return jsonify({"ERROR":"Ya existe esta cita"})
+                        right=count
+                    count+=1
+                tmp={"username":theUser,
+                    "date":theDate,
+                    "hour":theHour}
+                data.insert(right,tmp)
+                file.seek(0)
+                json.dump(data,file)
+                #file.truncate()
+        else:
+            raise IOError("Cant find freeDates.json")
+        return jsonify({"result":"Cita aniadida correctamente"})
 #class Usuario:
     #Clase para la identificacion y posterior gestion de citas
