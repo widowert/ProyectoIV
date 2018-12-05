@@ -7,7 +7,7 @@
 ## Proyecto
 
 __Gestor de citas:__
-Microserivico orientado a aportar facilidades de cara al sistema interno de citas de cualquier compañia. El microserivcio desarrollado es muy simple pero esboza correctamente la idea. Su funcionalidad no es más que alamacenar citas (tanto libres como ocupadas) y poder consultarlas (todas las libres, todas las ocupadas, por usuario, por fecha) y modificarlas (por ahora la modificación es eliminar y añadir).
+Microservicio orientado a aportar facilidades de cara al sistema interno de citas de cualquier compañia. El microserivcio desarrollado es muy simple pero esboza correctamente la idea. Su funcionalidad no es más que alamacenar citas (tanto libres como ocupadas) y poder consultarlas (todas las libres, todas las ocupadas, por usuario, por fecha) y modificarlas (por ahora la modificación es eliminar y añadir).
 
 Voy a desarrollar este microservicio ya que podría servir de apoyo para el desarrollo de una página web de una empresa familiar, además, se pretende su máxima integracion en cualquier aplicación.
 
