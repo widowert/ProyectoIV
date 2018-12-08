@@ -34,6 +34,6 @@ pip install -r requirements.txt
 
 ## Uso de la aplicacion
 _Ejecución app_ `python app.py` (version python testeada 3.6.6)
-En la raíz / redirige a /status donde puedes ver el status y ejemplos de uso.
+En la raíz / podemos ver el status y ejemplos de uso.
 
 _Ejecución tests_ `pytest` (version python testeada 3.6.6)
