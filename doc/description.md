@@ -36,4 +36,4 @@ pip install -r requirements.txt
 _Ejecución app_ `python app.py` (version python testeada 3.6.6)
 En la raíz / redirige a /status donde puedes ver el status y ejemplos de uso.
 
-_Ejecución tests_ `python test_proyecto.py` (version python testeada 3.6.6)
+_Ejecución tests_ `pytest` (version python testeada 3.6.6)
