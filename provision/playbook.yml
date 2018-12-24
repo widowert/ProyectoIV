@@ -1,0 +1,19 @@
+- hosts: all
+  sudo: yes
+  remote_user: widowert
+
+  tasks:
+  - name: Actualizar sistema
+    command: sudo apt-get update
+
+  - name: Instalacion de Python y pip
+    command: sudo apt-get install -y python3-pip
+
+  - name: Instalar GitHub
+    command: sudo apt-get install -y git
+
+  - name: Descargar mi repo del proyecto
+    git: repo=https://github.com/widowert/ProyectoIV.git dest=ProyectoIV/ force=yes
+
+  - name: Instalar los requerimientos para mi aplicación
+    command: sudo pip3 install -r ProyectoIV/requirements.txt
