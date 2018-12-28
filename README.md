@@ -8,7 +8,7 @@
 
 __Gestor de citas:__
 Mediante un login nos meteremos en nuestra cuenta, nos aparecera un calendario personalizado dependiendo de nuestras
-citas, del profesional elegido, dias libres, etc. Aqui además podremos elegir fecha y hora para cierto profesional y que esta cita quede registrada en nuestra cuenta y en el sistema para otros que quieran cita con el mismo profesional.__(EN DESARROLLO)__
+citas, del profesional elegido, dias libres, etc. Aqui además podremos elegir fecha y hora para cierto profesional y que esta cita quede registrada en nuestra cuenta y en el sistema para otros que quieran cita con el mismo profesional.
 
 Voy a desarrollar este microservicio ya que podría servir de apoyo para el desarrollo de una página web de una empresa familiar, además, se pretende su máxima integracion en cualquier aplicación.
 
@@ -25,7 +25,7 @@ Voy a desarrollar este microservicio ya que podría servir de apoyo para el desa
 
 ## PaaS Elegido: Heroku
 
-He elegido Heroku por su simplicidad y porque tras varios intentos con otros PaaS ha demostrado ser el más amigable; además de ser gratuito para servicios básicos como los que necesito para este proyecto. 
+He elegido Heroku por su simplicidad y porque tras varios intentos con otros PaaS ha demostrado ser el más amigable; además de ser gradtuito para servicios básicos como los que necesito para este proyecto. 
 
 **despliegue** : [proyectoiv](https://proyectoiv.herokuapp.com)
 
@@ -37,6 +37,11 @@ Contenedor: https://dockerproyectoiv.herokuapp.com/
 
 Repositorio en DockerHub: https://hub.docker.com/r/widowert/proyectoiv/
 
+## Despliegue en Azure
+
+Despliegue final: proyectoiv.westeurope.cloudapp.azure.com
+
+**__Documentacion en progreso__**
 
 ## Herramientas:
 
@@ -44,5 +49,7 @@ Repositorio en DockerHub: https://hub.docker.com/r/widowert/proyectoiv/
 + Framework: `flask`
 + Tests: `unittest` _, y_ `Travis CI` _para su integracion con Github_
 + PaaS: `HEROKU`
+
+
 
 
