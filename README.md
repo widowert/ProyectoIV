@@ -7,11 +7,24 @@
 ## Proyecto
 
 __Gestor de citas:__
-Mediante un login nos meteremos en nuestra cuenta, nos aparecera un calendario personalizado dependiendo de nuestras
-citas, del profesional elegido, dias libres, etc. Aqui además podremos elegir fecha y hora para cierto profesional y que esta cita quede registrada en nuestra cuenta y en el sistema para otros que quieran cita con el mismo profesional.
+Esta aplicación es una base para un gestor completo de citas. Su funcionalidad está reducida a almacenar tanto las citas libres como ocupadas en json's. Estas citas cuentan con métodos para ser consultadas, modificadas, añadidas o eliminadas. Todas las interacciones con la aplicación se llevan a cabo vía html (de cara al usuario) y las respuestas se dan en json cumpliendo modelo RESTful.
 
 Voy a desarrollar este microservicio ya que podría servir de apoyo para el desarrollo de una página web de una empresa familiar, además, se pretende su máxima integracion en cualquier aplicación.
 
+__Uso:__
+Consultar: 
+  /getFreeDates/10[dia]/11[mes]/18[año] devuelve un JSON con las horas libres ese día.
+  /getDates/username devuelve un JSON con tus citas si las hay, las citas de username.
+  /getAllFreeDates devuelve un JSON con todas las citas libres registradas.
+  /getAllOcuppiedDates devuelve JSON con todas las citas ocupadas.
+  /status para el estado de la aplicación
+ Añadir:
+  /addFreeDate/dia/mes/año/hora o /add/free/dia/mes/año/hora para registrar (añadir) una nueva cita libre
+  /addOccupiedDate/dia/mes/año/hora/username o /add/occupied/dia/mes/año/hora/username para registrar una nueva cita ocupada
+ Eliminar:
+  /deleteFreeDate/dia/mes/año/hora o /delete/free/dia/mes/año/hora para eliminar una cita libre registrada
+  /deleteOccupiedDate/dia/mes/año/hora o /delete/occupied/dia/mes/año/hora para eliminar una cita ocupada
+  
 ## Documentación:
 
 [__Descripción del proyecto__](https://widowert.github.io/ProyectoIV/doc/description)
@@ -37,7 +50,9 @@ Contenedor: https://dockerproyectoiv.herokuapp.com/
 
 Repositorio en DockerHub: https://hub.docker.com/r/widowert/proyectoiv/
 
-## Despliegue en Azure
+## Despliegue IaaS con Azure
+
+Utilizando Vagrant como orquestador de máquina virtual, Ansible como script de provisionamiento y Fabric para la automaticación de despliegue y ejecución.
 
 Despliegue final: proyectoiv.westeurope.cloudapp.azure.com
 
