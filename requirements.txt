@@ -1,5 +1,4 @@
 pytest
-pymongo
 flask
 gunicorn
 requests
