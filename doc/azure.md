@@ -55,7 +55,7 @@ Nuestra máquina podemos gestiornarla desde el portal de Azure.
 
 Además de todos los recursos relacionados con ella y que se crearon con ella.
 
-![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/axure-portal-recursos.PNG)
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/azure-portal-recursos.PNG)
 
 # Despliegue y ejecución con Fabric
 Ya tenemos nuestra aplicación en una máquina virtual con todo lo que necesita para funcionar correctamente, ahora necesitamos poder comunicarnos de una forma eficaz y sencilla con esta maquina para llevar a cabo acciones como Encender, Apagar, Actualizar nuestra aplicación o instalar algún nuevo módulo para una nueva versión, etc.([Operaciones Fabric](http://docs.fabfile.org/en/1.14/api/core/operations.html)) Para esto usamos Fabric, que mediante funciones de Python y diferentes utilidades podemos definir diferentes acciones a llevar a cabo dependiendo de la función principal que llamemos. (Necesitamos instalar Fabric en la máquina host como programa para lanzar las acciones y como biblioteca para crear el fabfile e importar las funciones)
