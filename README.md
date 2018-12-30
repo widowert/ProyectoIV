@@ -64,7 +64,11 @@ Despliegue final: proyectoiv.westeurope.cloudapp.azure.com
 + Framework: `flask`
 + Tests: `unittest` _, y_ `Travis CI` _para su integracion con Github_
 + PaaS: `HEROKU`
-
++ IaaS : `Azure`
++ Contenedor: `Docker`
++ Provisionamiento : `Amsible`
++ Despliegue: `Fabric`
++ Orquestador MV: `Vagrant`
 
 
 
