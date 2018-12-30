@@ -11,7 +11,7 @@ Vagrant.configure('2') do |config|
     azure.client_secret = ENV['AZURE_CLIENT_SECRET']
     azure.subscription_id = ENV['AZURE_SUBSCRIPTION_ID']
 
-     # Variables correspondientes a la creacion de la MV
+    # vars to creation of VM instead of use the defaults values
     azure.vm_name = "proyectoiv" 
     azure.vm_size = 'Basic_A0'
     azure.tcp_endpoints = "80"
