@@ -35,6 +35,8 @@ __Uso:__
 
 [__Docker__](https://widowert.github.io/ProyectoIV/doc/docker)
 
+[__IaaS Azure,Vagrant,Ansible y Fabric__](https://widowert.github.io/ProyectoIV/doc/azure)
+
 
 ## PaaS Elegido: Heroku
 
@@ -55,8 +57,6 @@ Repositorio en DockerHub: https://hub.docker.com/r/widowert/proyectoiv/
 Utilizando Vagrant como orquestador de máquina virtual, Ansible como script de provisionamiento y Fabric para la automaticación de despliegue y ejecución.
 
 Despliegue final: proyectoiv.westeurope.cloudapp.azure.com
-
-**__Documentacion en progreso__**
 
 ## Herramientas:
 
