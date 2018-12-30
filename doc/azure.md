@@ -38,8 +38,11 @@ Para que este Vagrantfile funcione correctamente necesitamos exportar todas las 
 Además, como avisé antes, incluimos el provisionamiento con Ansible para su ejecución justo tras la creación de la máquina.
 
 + Una vez tenemos el Vagrantfile y todo lo necesario instalado ejecutamos `sudo -E vagrant up --provider=azure` para levantar nuestra máquina. En mi caso tengo que usar sudo y para mantener las variables definidas en este entorno tengo que usar la opción -E.
+
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/vagrantup1.PNG)
+
 Resultados de Ansible tras la creación de la máquina.
+
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/vagrantup2.PNG)
 
 Para comprobar que todo va bien podemos conectarnos por ssh con `vagrant ssh` estando en la carpeta del proyecto y, una vez conectados, ejecutamos la aplicación, que la podemos encontrar en /vagrant ya que lanzamos la máquina desde esta carpeta y es compartida, o en el directorio principal que es donde hicimos el git clone con el provisionamiento y es donde se encontrará nuestra aplicación realmente.
