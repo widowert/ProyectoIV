@@ -28,10 +28,15 @@ Primero necesitamos generar AAD (Azure Active Directory) que es como un entorno 
 + Instalamos los plugin de Vagrant para Azure con `vagrant plugin install vagrant-azure`
 
 + Ahora es el momento de crear un Vagrantfile (necesitamos tener [instalado Vagrant](https://www.vagrantup.com/docs/installation/) en nuestra máquina host). Para ello nos vamos al directorio de nuestro proyecto y creamos el archivo (este archivo variará dependiendo del tipo de máquina virtual que queramos montar, en nuestro caso es Linux-Ubuntu Server, no está definida porque es la que se utiliza por defecto). En el Vagrantfile definimos que vamos a utilizar Azure y definimos diferentes valores, unos para el uso de clave ssh y su localización, otros para el acceso a los recursos (variables con los valores guardados anteriormente) y otros para modificar los valores por defecto de nuestra máquina virtual a crear como es el nombre, la localización (servidor a usar), puerto de salida,etc.
+
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/vagrantfile.PNG)
+
 Para que este Vagrantfile funcione correctamente necesitamos exportar todas las variables que encontramos en él, estas variables son los valores que guardamos anteriormente con la siguiente correspondencia: azure_tenant_id=tenant, client_id=appID, client_secret=password, subscription_id=id de la subscripción que aparece al hacer login en Azure.
+
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/azure-exports.png)
+
 Además, como avisé antes, incluimos el provisionamiento con Ansible para su ejecución justo tras la creación de la máquina.
+
 + Una vez tenemos el Vagrantfile y todo lo necesario instalado ejecutamos `sudo -E vagrant up --provider=azure` para levantar nuestra máquina. En mi caso tengo que usar sudo y para mantener las variables definidas en este entorno tengo que usar la opción -E.
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/vagrantup1.PNG)
 Resultados de Ansible tras la creación de la máquina.
