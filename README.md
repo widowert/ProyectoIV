@@ -66,7 +66,7 @@ Despliegue final: proyectoiv.westeurope.cloudapp.azure.com
 + PaaS: `HEROKU`
 + IaaS : `Azure`
 + Contenedor: `Docker`
-+ Provisionamiento : `Amsible`
++ Provisionamiento : `Ansible`
 + Despliegue: `Fabric`
 + Orquestador MV: `Vagrant`
 
