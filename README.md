@@ -12,16 +12,16 @@ Esta aplicación es una base para un gestor completo de citas. Su funcionalidad 
 Voy a desarrollar este microservicio ya que podría servir de apoyo para el desarrollo de una página web de una empresa familiar, además, se pretende su máxima integracion en cualquier aplicación.
 
 __Uso:__
-+ __Consultar__: 
++ __Consultar__ (GET): 
   - /getFreeDates/10[dia]/11[mes]/18[año] devuelve un JSON con las horas libres ese día.
   - /getDates/username devuelve un JSON con tus citas si las hay, las citas de username.
   - /getAllFreeDates devuelve un JSON con todas las citas libres registradas.
   - /getAllOcuppiedDates devuelve JSON con todas las citas ocupadas.
   - /status para el estado de la aplicación
-+ __Añadir__:
++ __Añadir__ (POST):
   - /addFreeDate/dia/mes/año/hora o /add/free/dia/mes/año/hora para registrar (añadir) una nueva cita libre
   - /addOccupiedDate/dia/mes/año/hora/username o /add/occupied/dia/mes/año/hora/username para registrar una nueva cita ocupada
-+ __Eliminar__:
++ __Eliminar__ (DELETE):
   - /deleteFreeDate/dia/mes/año/hora o /delete/free/dia/mes/año/hora para eliminar una cita libre registrada
   - /deleteOccupiedDate/dia/mes/año/hora o /delete/occupied/dia/mes/año/hora para eliminar una cita ocupada
   
