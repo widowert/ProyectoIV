@@ -24,7 +24,16 @@ __Uso:__
 + __Eliminar__ (DELETE):
   - /deleteFreeDate/dia/mes/año/hora o /delete/free/dia/mes/año/hora para eliminar una cita libre registrada
   - /deleteOccupiedDate/dia/mes/año/hora o /delete/occupied/dia/mes/año/hora para eliminar una cita ocupada
-  
+ 
+__Instalación de dependecias__
+`pip install -r requirements.txt`
+
+__Ejecución de los tests__ 
+`pytest` (version python testeada 3.6.6)
+
+__Ejecución app__ 
+`python app.py` (version python testeada 3.6.6) también puedes iniciarla con `gunicorn app:app`
+
 ## Documentación:
 
 [__Descripción del proyecto__](https://widowert.github.io/ProyectoIV/doc/description)
