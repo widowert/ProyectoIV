@@ -15,6 +15,7 @@ Este playbook tiene sus fallos, no se debe usar sudo directamente en la versión
 
 ## Creación de máquina virtual con IaaS. Azure y Vagrant.
 Primero necesitamos generar AAD (Azure Active Directory) que es como un entorno delimitado dentro de las capacidades de nuestra subscripción de Azure en el cual podemos delegar permisos a Vagrant para la gestión de algunos recursos. Para esto debemos seguir los siguientes pasos ([Fuente original](https://github.com/Azure/vagrant-azure)):
+
 + Instalar el CLI de Azure, que es una linea de comando para poder comunicarse y gestionar Azure desde la consola de nuestro sistema. [Cómo instalarlo](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
 
 + En tu consola, ejecuta `az login` para entrar en tu cuenta de Azure.
