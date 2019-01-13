@@ -37,6 +37,8 @@ Primero necesitamos generar AAD (Azure Active Directory) que es como un entorno 
 
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/vagrantfileNEW.PNG)
 
+*Faltan los end's del final y comentarios en los lados, ver [Vagrantfile original](https://github.com/widowert/ProyectoIV/blob/master/Vagrantfile) para mejor visualización
+
 Para que este Vagrantfile funcione correctamente necesitamos exportar todas las variables que encontramos en él, estas variables son los valores que guardamos anteriormente con la siguiente correspondencia: azure_tenant_id=tenant, client_id=appID, client_secret=password, subscription_id=id de la subscripción que aparece al hacer login en Azure.
 
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/azure-exports.png)
@@ -72,6 +74,7 @@ Además de todos los recursos relacionados con ella y que se crearon con ella.
 Ya tenemos nuestra aplicación en una máquina virtual con todo lo que necesita para funcionar correctamente, ahora necesitamos poder comunicarnos de una forma eficaz y sencilla con esta maquina para llevar a cabo acciones como Encender, Apagar, Actualizar nuestra aplicación o instalar algún nuevo módulo para una nueva versión, etc.([Operaciones Fabric](http://docs.fabfile.org/en/1.14/api/core/operations.html)) Para esto usamos Fabric, que mediante funciones de Python y diferentes utilidades podemos definir diferentes acciones a llevar a cabo dependiendo de la función principal que llamemos. (Necesitamos instalar Fabric en la máquina host como programa para lanzar las acciones y como biblioteca para crear el fabfile e importar las funciones)
 
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/fabfileNEW.PNG)
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/fabfileNEW2.PNG)
 
 Se ejecuta el archivo con la acción necesaria con la orden `fab -f <localización del fabfile.py> -H <usuario@host tipo ssh> "Accion"`, por ejemplo, yo llevo a cabo el inicio de mi aplicación con `fab -f despliegue/fabfile.py -H vagrant@proyectoiv.westeurope.cloudapp.azure.com "Start"`
 
