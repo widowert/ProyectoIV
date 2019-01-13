@@ -55,6 +55,11 @@ Para comprobar que todo va bien podemos conectarnos por ssh con `vagrant ssh` es
 
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/vagrantssh1.PNG)
 
+** Decir en este punto que no es necesario el uso de sudo para utilizar Vagrant, yo lo utilizo porque, por problemas de permisos, en mi máquina virtual (instalada únicamente para el desarrolo de este hito) me requiere de privilegios de root para casi cualquier acción, como ejemplo pongo una imagen de git, el cual tampoco necesita de sudo, pero en mi caso lo necesito para poder actualizar un repo local) **
+
+![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/sudoProblemGit.PNG)
+
+
 Nuestra máquina podemos gestiornarla desde el portal de Azure.
 
 ![img](https://raw.githubusercontent.com/widowert/ProyectoIV/master/doc/img/azure/azure-portal-mv.PNG)
