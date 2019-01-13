@@ -32,24 +32,29 @@ def Update():
 		Install()
 		print("Updated project succesfully!!")
 	else:
-		print("The current version on Github is not stable, not passing tests, not updated but stable")	
+		print("The current version on Github is not stable, not passing tests, not updated but stable")
 def Start():
 	with cd('ProyectoIV'):
 		print("Started succesfully, your app is in the air!\n")
 		print("Remember to stop it if you want or it will keep flying")
-		#Ejecución de la aplicación con gunicorn
-		sudo('gunicorn app:app --bind 0.0.0.0:80')
-		
+		#Ejecución de la aplicación con gunicorn y guardamos pid en gunicorn.pid
+		sudo('gunicorn app:app --bind 0.0.0.0:80 --pid gunicorn.pid')
+
+def catpid(): #comando de pruebas para ir viendo si guarda pid
+	with cd('ProyectoIV'):
+		run('cat gunicorn.pid')
+
 def ClassicStart():
 	with cd('ProyectoIV'):
 		print("Flask started succesfully, remember its going to stop when you leave")
 		#Ejecución de la aplicación con python, se para al salir
 		#por lo que no necesitamos funcion de Stop
 		sudo('python3 app.py')
-		
+
 def Stop():
 	#Matamos el proceso de gunicorn para parar la ejecucion
-	sudo('pkill gunicorn')
+	#sudo('pkill gunicorn')
+	sudo('kill -9 `cat ProyectoIV/gunicorn.pid`') #matamos solo al proceso gunicorn que controla nuestra app (por si hubiera otros)
 	print("Stoped succesfully, your app is down")
 def UpdateSystem():
 	sudo('apt-get update')

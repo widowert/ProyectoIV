@@ -1,19 +1,49 @@
 - hosts: all
-  sudo: yes
+  #sudo: yes #seria innecesario usando become, de hecho no sería correcto en la version actual de Ansible, mas info https://docs.ansible.com/ansible/latest/reference_appendices/config.html?highlight=sudo%20bool#default-sudo-exe
   remote_user: widowert
+  become: yes #para ecalar privilegios según la manera definida en la variable become_method
+  #become_method: sudo #en realidad sudo es el que se utiliza por defecto (no es necesario definirlo)
+  # mas info en https://docs.ansible.com/ansible/latest/user_guide/become.html?highlight=become#id1
 
   tasks:
   - name: Actualizar sistema
-    command: sudo apt-get update
+    #command: apt-get update
+    #mejor seria utilizar
+    apt:
+      update_cache: yes
+      cache_valid_time: 86400 #si ha pasado un dia o mas desde la ultima actualizacion actualiza, si no, no (para evitar actualizaciones innecesarias)
+    #no actualizo el sistema (upgrade) por posibles incompatibilidades con mi proyecto
 
   - name: Instalacion de Python y pip
-    command: sudo apt-get install -y python3-pip
+    #command: apt-get install -y python3-pip
+    #mejor seria utilizar
+    apt:
+      name: python3-pip
+      install_recommends: yes
 
   - name: Instalar GitHub
-    command: sudo apt-get install -y git
+    #command: apt-get install -y git
+    #mejor seria utilizar
+    apt:
+      name: git
+      install_recommends: yes
 
   - name: Descargar mi repo del proyecto
     git: repo=https://github.com/widowert/ProyectoIV.git dest=ProyectoIV/ force=yes
 
   - name: Instalar los requerimientos para mi aplicación
-    command: sudo pip3 install -r ProyectoIV/requirements.txt
+    #command: pip3 install -r ProyectoIV/requirements.txt
+    #mejor seria utilizar
+    pip:
+      requirements: ProyectoIV/requirements.txt
+    #mas info en https://docs.ansible.com/ansible/latest/modules/pip_module.html?highlight=pip
+
+  - name: APT autoclean
+    apt:
+       autoclean: yes #para eliminar paquetes innecesarios de la cache
+    #y
+  - name: APT autoremove
+    apt:
+       autoremove: yes #para eliminar dependencias innecesarios de la cache
+
+    #mas info en https://docs.ansible.com/ansible/latest/modules/apt_module.html?highlight=apt
