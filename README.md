@@ -71,7 +71,7 @@ Despliegue final: proyectoiv.westeurope.cloudapp.azure.com
 
 + Lenguaje: `python`.
 + Framework: `flask`
-+ Tests: `unittest` _, y_ `Travis CI` _para su integracion con Github_
++ Tests: `unittest`+`pytest` _, y_ `Travis CI` _para su integracion con Github_
 + PaaS: `HEROKU`
 + IaaS : `Azure`
 + Contenedor: `Docker`
